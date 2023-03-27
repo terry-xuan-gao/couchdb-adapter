@@ -9,7 +9,7 @@
     "build": "rimraf lib && tsc",
     "lint": "eslint --ext .ts src/ test/",
     "test": "jest --forceExit",
-    "test-coveralls": "npm run test && shx cat ./coverage/lcov.info | node ./bin/coveralls.js --verbose --detectOpenHandles",
+    "test-coveralls": "npm run test",
     "format": "yarn format:check --write",
     "format:check": "prettier --check \"{src,test}/**/*.ts\"",
     "prepack": "run-s lint build",
