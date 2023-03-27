@@ -31,7 +31,7 @@ jobs:
           curl -X PUT http://admin:123456@127.0.0.1:5984/casbin/policies -d '{ "_id":"policies", "value":[] }'
 
       - name: Run tests
-        run: npm test
+        run: npm run test-coveralls
 
       - name: Coveralls Parallel
         uses: coverallsapp/github-action@v1
@@ -46,5 +46,5 @@ jobs:
       - name: Coveralls Finished
         uses: coverallsapp/github-action@v1
         with:
-          parallel-finished: true
           github-token: ${{ secrets.github_token }}
+          parallel-finished: true

@@ -9,6 +9,7 @@
     "build": "rimraf lib && tsc",
     "lint": "eslint --ext .ts src/ test/",
     "test": "jest --forceExit",
+    "test-coveralls": "npm run test && shx cat ./coverage/lcov.info | node ./bin/coveralls.js --verbose",
     "format": "yarn format:check --write",
     "format:check": "prettier --check \"{src,test}/**/*.ts\"",
     "prepack": "run-s lint build",
@@ -31,6 +32,7 @@
     "npm-run-all": "^4.1.5",
     "prettier": "^2.0.5",
     "rimraf": "^3.0.2",
+    "shx": "^0.3.4",
     "ts-jest": "^29.0.5",
     "tslint": "^6.1.2",
     "typescript": "^4.9.5"
