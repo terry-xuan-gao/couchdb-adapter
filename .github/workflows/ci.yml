@@ -37,6 +37,7 @@ jobs:
         uses: coverallsapp/github-action@v2
         with:
           parallel: true
+          github-token: ${{ secrets.github_token }}
 
   finish:
     needs: test
@@ -46,3 +47,4 @@ jobs:
         uses: coverallsapp/github-action@v2
         with:
           parallel-finished: true
+          github-token: ${{ secrets.github_token }}
