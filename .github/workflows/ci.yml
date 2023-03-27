@@ -34,7 +34,7 @@ jobs:
         run: npm test
 
       - name: Coveralls Parallel
-        uses: coverallsapp/github-action@v2
+        uses: coverallsapp/github-action@v1
         with:
           parallel: true
           github-token: ${{ secrets.github_token }}
@@ -44,7 +44,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Coveralls Finished
-        uses: coverallsapp/github-action@v2
+        uses: coverallsapp/github-action@v1
         with:
           parallel-finished: true
           github-token: ${{ secrets.github_token }}
